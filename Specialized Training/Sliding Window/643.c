@@ -1,3 +1,4 @@
+// 643. 子数组最大平均数 I
 #include <stdio.h>
 #include <limits.h>
 double findMaxAverage(int *nums, int numsSize, int k)

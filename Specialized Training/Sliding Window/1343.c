@@ -1,3 +1,4 @@
+// 1343. 大小为 K 且平均值大于等于阈值的子数组数目
 #include <stdio.h>
 int numOfSubarrays(int *arr, int arrSize, int k, int threshold)
 {

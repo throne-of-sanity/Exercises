@@ -1,4 +1,4 @@
-#include <string.h>
+// 2379. 得到 K 个黑块的最少涂色次数#include <string.h>
 #include <stdio.h>
 #define max(a, b) ((a) > (b) ? (a) : (b))
 int minimumRecolors(char *blocks, int k)

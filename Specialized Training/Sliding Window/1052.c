@@ -1,3 +1,4 @@
+// 1052. 爱生气的书店老板
 #include <stdio.h>
 #define MAX(a, b) ((b) > (a) ? (b) : (a))
 int maxSatisfied(int *customers, int customersSize, int *grumpy, int grumpySize, int minutes)

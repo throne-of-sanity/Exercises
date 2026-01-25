@@ -1,3 +1,4 @@
+// 2090. 半径为 k 的子数组平均值
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

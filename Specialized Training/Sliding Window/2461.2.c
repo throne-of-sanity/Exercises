@@ -1,3 +1,5 @@
+// 2461. 长度为 K 子数组中的最大和
+// 记录下标
 #include <stdio.h>
 #include <string.h>
 #define MAX(a, b) ((a) > (b) ? (a) : (b))

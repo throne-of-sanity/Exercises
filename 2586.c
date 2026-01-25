@@ -1,3 +1,4 @@
+// 2586. 统计范围内的元音字符串数
 #include <stdio.h>
 #include <string.h>
 int vowelStrings(char **words, int wordsSize, int left, int right)

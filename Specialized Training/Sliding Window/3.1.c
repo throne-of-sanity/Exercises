@@ -1,21 +1,23 @@
+// 3. 无重复字符的最长子串
+// 记录出现次数+滑动窗口
 #include <string.h>
 #include <stdio.h>
 int lengthOfLongestSubstring(char *s)
 {
     int result = 0, ans = 0;
     int len = strlen(s);
-    int cnt[128];
-    memset(cnt, -1, sizeof(cnt));
-    int r = 0;
-    for (int i = 0; i < len; i++)
+    int hash[128];
+    memset(hash, 0, sizeof(hash));
+    int left = 0, right = 0;
+    for (; right < len; right++)
     {
-        if (cnt[s[i]] >= r)
+        hash[s[right]]++;
+        while (hash[s[right]] > 1)
         {
-            r = cnt[s[i]] + 1;
-            ans = i - r;
+            hash[s[left]]--;
+            left++;
         }
-        cnt[s[i]] = i;
-        ans++;
+        ans = right - left + 1;
         if (ans > result)
             result = ans;
     }

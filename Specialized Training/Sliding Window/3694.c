@@ -1,3 +1,4 @@
+// 3694. 删除子字符串后不同的终点
 #include <stdio.h>
 #include <string.h>
 #include "uthash.h"

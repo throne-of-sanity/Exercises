@@ -1,3 +1,4 @@
+// 3679. 使库存平衡的最少丢弃次数
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

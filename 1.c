@@ -21,7 +21,7 @@ void insert(int ikey, int ival)
     {
         struct hashTable *tmp = malloc(sizeof(struct hashTable));
         tmp->key = ikey;
-        tmp->val = ival;
+        tmp->val = ival;   
         HASH_ADD_INT(hashtable, key, tmp);
     }
     else

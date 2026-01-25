@@ -1,3 +1,4 @@
+// 2461. 长度为 K 子数组中的最大和
 #include "uthash.h"
 #include <stdio.h>
 #define MAX(a, b) ((a) > (b) ? (a) : (b));
@@ -7,7 +8,7 @@ typedef struct
     int cnt;
     UT_hash_handle hh;
 } HashNode;
-long long maxSum(int *nums, int numsSize, int m, int k)
+long long maximumSubarraySum(int *nums, int numsSize, int k)
 {
     long long ans = 0, sum = 0;
     int distinct = 0;
@@ -20,7 +21,7 @@ long long maxSum(int *nums, int numsSize, int m, int k)
         if (entry == NULL)
         {
             distinct++;
-            entry = (HashNode *)malloc(sizeof(HashNode));
+            entry = malloc(sizeof(HashNode));
             entry->key = nums[i];
             entry->cnt = 1;
             HASH_ADD_INT(count, key, entry);
@@ -31,7 +32,7 @@ long long maxSum(int *nums, int numsSize, int m, int k)
         }
         if (i < k - 1)
             continue;
-        if (distinct >= m)
+        if (distinct == k)
             ans = MAX(ans, sum);
         sum -= nums[i - k + 1];
         HashNode *exit = NULL;
@@ -51,11 +52,10 @@ long long maxSum(int *nums, int numsSize, int m, int k)
 }
 int main()
 {
-    int nums[] = {5, 9, 9, 2, 4, 5, 4};
-    int m = 1;
+    int nums[] = {1, 5, 4, 2, 9, 9, 9};
     int k = 3;
     int numsSize = sizeof(nums) / sizeof(nums[0]);
-    long long res = maxSum(nums, numsSize, m, k);
+    long long res = maximumSubarraySum(nums, numsSize, k);
     printf("%lld\n", res);
     return 0;
 }
