@@ -13,6 +13,8 @@
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-I", 
            	 	"${workspaceFolder}/include",
+				"-fexec-charset=UTF-8",  // 设置执行字符集为UTF-8
+                "-finput-charset=UTF-8", // 设置输入字符集为UTF-8
 			],
 			"options": {
 				"cwd": "${fileDirname}"
